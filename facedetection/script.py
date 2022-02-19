@@ -1,4 +1,4 @@
-import cv2
+import cv2 #importing open cv library      
 
 def generate_dataset(img, id, img_id):
     cv2.imwrite("data/user."+str(id)+"."+str(img_id)+".jpg", img)

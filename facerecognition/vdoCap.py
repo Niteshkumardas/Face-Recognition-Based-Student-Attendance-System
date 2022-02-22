@@ -4,7 +4,7 @@ import cv2
 
 # define a video capture object
 vid = cv2.VideoCapture(0)
-
+print('jjjj')
 while(True):
 	
 	# Capture the video frame
@@ -19,7 +19,9 @@ while(True):
 	# desired button of your choice
 	if cv2.waitKey(1) & 0xFF == ord('q'):
 		break
-
+print('gggg')
+cv2.imwrite("D:/minor_project/face_attendance/facerecognition/aditya.jpg",frame)
+	
 # After the loop release the cap object
 vid.release()
 # Destroy all the windows

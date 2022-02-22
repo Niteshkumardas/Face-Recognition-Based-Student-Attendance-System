@@ -15,8 +15,8 @@ import cv2
 
 #SS modified codebase
 data = load('dataset_of_students.npz')
-image=Image.open('test_photo/aditya.jpg')
-
+#image=Image.open('aditya.npz')
+image=load('aditya.npz')
 trainX, trainy, testX, testy = data['arr_0'], data['arr_1'], data['arr_2'], data['arr_3']
 trainX, trainy, testX, testy = data['arr_0'], data['arr_1'], data['arr_2'], data['arr_3']
 print('Loaded: ', trainX.shape, trainy.shape, testX.shape, testy.shape)
@@ -44,8 +44,9 @@ testy = out_encoder.transform(testy)
 model = SVC(kernel='linear', probability=True)
 model.fit(trainX, trainy)
 # random example from the test dataset
-selection = choice([i for i in range(testX.shape[0])])
-selection=image
+#selection = choice([i for i in range(testX.shape[0])])
+selection=load('aditya.npz')
+print(image)
 random_face_pixels = testX_faces[selection]
 random_face_emb = testX[selection]
 random_face_class = testy[selection]

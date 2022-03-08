@@ -1,6 +1,7 @@
 
 import cv2
 from mtcnn.mtcnn import MTCNN
+#from ExcelFile import attendance
 from ExcelFile import attendance
 from predict import predict
 detector = MTCNN()

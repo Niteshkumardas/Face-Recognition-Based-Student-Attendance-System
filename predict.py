@@ -41,6 +41,9 @@ def load_model():
         models = pickle.load(f)
         return models
 
+def name1():
+    n=get_name()
+    return n
 
 if __name__ == "__main__":
    

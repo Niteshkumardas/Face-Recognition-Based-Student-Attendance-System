@@ -1,0 +1,9 @@
+uvicorn[standard]
+gunicorn
+pydantic
+pony
+psycopg2
+python-dotenv
+pydantic[dotenv]
+fastapi
+mtcnn
